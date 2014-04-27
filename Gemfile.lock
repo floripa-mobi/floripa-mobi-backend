@@ -1,0 +1,14 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    floripa-public-transit (0.0.1)
+      nokogiri (= 1.6.1)
+    mini_portile (0.5.3)
+    nokogiri (1.6.1)
+      mini_portile (~> 0.5.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  floripa-public-transit
