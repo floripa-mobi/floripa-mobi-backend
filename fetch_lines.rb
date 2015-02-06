@@ -4,6 +4,7 @@ require 'rubygems'
 require 'bundler/setup'
 require 'floripa-public-transit'
 
+lines = [];
 
 FloripaPublicTransit.fetch_line_numbers.each do |line_number|
   puts "Fetching line #{line_number}"
@@ -24,9 +25,15 @@ FloripaPublicTransit.fetch_line_numbers.each do |line_number|
         }
       end
     }
+    lines.push({ number: line.number, name: line.name })
     f.write(json.to_json)
   end
 
+end
+
+
+File.open("data/index.json", "w") do |f|
+  f.write(lines.to_json)
 end
 
 puts "Done"
