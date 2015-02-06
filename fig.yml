@@ -1,0 +1,5 @@
+fetch:
+  build: .
+  command: ruby fetch_lines.rb
+  volumes:
+    - .:/usr/src/app
